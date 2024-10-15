@@ -1,19 +1,14 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class MenuStart here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class MenuScreen extends World
-{
-    Label button;
-    
-    public MenuScreen()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        button=new Label(0,80);
-    }
+public class MenuScreen extends World {
+  public MenuScreen() {
+    super(600, 400, 1);
+    addObject(new Button, 300, 340);
+    //addObject(new Button(this::goInstructions), 300, 340);
+  }
+
+ // public void goInstructions() {
+ //   Greenfoot.setWorld(new InstructionScreen(this));
+ // }
+
 }
