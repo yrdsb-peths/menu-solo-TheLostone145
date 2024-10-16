@@ -15,6 +15,7 @@ public class Label extends Actor
     public Label(int value, int fontSize)
     {
         this(Integer.toString(value), fontSize);
+        updateImage();
     }
     
     
@@ -23,6 +24,10 @@ public class Label extends Actor
         this.value = value;
         this.fontSize = fontSize;
         updateImage();
+    }
+    public Label(GreenfootImage currentAvatar, int value, int fontSize)
+    {
+        this(Integer.toString(value), fontSize);
     }
 
     
