@@ -8,7 +8,7 @@ public class MenuScreen extends World {
     public MenuScreen() {
         super(600, 400, 1);
 
-        addObject(new Button(this::goInstructions), 300, 300);
+        addObject(new Button(this::goInstructions), 300, 350);
         
         avatarQueue = new Queue<>();
         loadAvatars();
@@ -16,8 +16,8 @@ public class MenuScreen extends World {
         avatarLabel = new Label(currentAvatar, 100, 100);
         addObject(avatarLabel, 300, 200);
         
-        // Cycle Avatar Button
-        addObject(new Button(this::cycleAvatar), 300, 350);
+       
+        addObject(new Button(this::cycleAvatar), 300, 300);
     }
 
     public void goInstructions() {
