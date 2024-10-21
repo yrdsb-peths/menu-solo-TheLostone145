@@ -56,6 +56,7 @@ public class MenuScreen extends World {
     }
 
     public void cycleScreens() {
+       
         Label firstScreen = screenQueue.dequeue();
         screenQueue.enqueue(firstScreen);
         currentScreen = screenQueue.peek();
@@ -64,10 +65,8 @@ public class MenuScreen extends World {
             removeObject(screenLabel);
         }
     
-        screenLabel = new Label(currentScreen.toString(), 100);  
-        addObject(screenLabel, 300, 200);
+        screenLabel = currentScreen;
+        addObject(screenLabel, 300, 200);  
     }
-    
-    
     
 }
