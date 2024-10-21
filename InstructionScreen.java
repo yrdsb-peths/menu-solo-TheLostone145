@@ -19,7 +19,7 @@ public class InstructionScreen extends World
         instructionLabel = new Label(instructions[currentIndex], 24);
         addObject(instructionLabel, 300, 200);
         screenQueue = new Queue<>(); 
-        addObject(new Button(this::goBack), 300, 350);
+        addObject(new Button(this::goBack), 300, 300);
         addObject(new Button(this::cycleScreens), 300, 350);
 
         loadScreen();
@@ -34,9 +34,9 @@ public class InstructionScreen extends World
     }
 
     private void loadScreen() {
-        screenQueue.enqueue(new Label(1, 100));
-        screenQueue.enqueue(new Label(2, 100));
-        screenQueue.enqueue(new Label(3, 100));
+        screenQueue.enqueue(new Label(instructions[1], 100));
+        screenQueue.enqueue(new Label(instructions[2], 100));
+        screenQueue.enqueue(new Label(instructions[3], 100));
     }
     public void cycleScreens() {
        
