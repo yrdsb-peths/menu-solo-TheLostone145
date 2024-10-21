@@ -11,7 +11,7 @@ public class MenuScreen extends World {
     public MenuScreen() {
         super(600, 400, 1);
 
-        
+        addObject(new Button(this::goToHighScores), 300, 400);
         avatarQueue = new Queue<>();
         screenQueue = new Queue<>(); 
 
@@ -64,6 +64,10 @@ public class MenuScreen extends World {
         screenLabel = null; 
         screenLabel = currentScreen;
         addObject(screenLabel, 300, 200);  
+    }
+
+    public void goToHighScores() {
+        Greenfoot.setWorld(new HighScoreScreen()); 
     }
     
 }
