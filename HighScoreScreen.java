@@ -4,12 +4,13 @@ import greenfoot.*;
 
 public class HighScoreScreen extends World {
     private Map<String, Integer> highScores;
-
+    private MenuScreen menuScreen;
     public HighScoreScreen() {
         super(600, 400, 1);
         highScores = new HashMap<>();
         loadScores();
         displayScores();
+        addObject(new Button(this::goBack), 300, 350);
     }
 
     private void loadScores() {
@@ -25,5 +26,9 @@ public class HighScoreScreen extends World {
             addObject(scoreLabel, 300, y);
             y += 50;
         }
+    }
+    public void goBack() 
+    {
+        Greenfoot.setWorld(menuScreen);  
     }
 }
