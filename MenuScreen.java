@@ -48,6 +48,11 @@ public class MenuScreen extends World {
         avatarQueue.enqueue(firstAvatar);
         currentAvatar = avatarQueue.peek();
         avatarLabel.setImage(currentAvatar);
+    
+        if (screenLabel != null) {
+            removeObject(screenLabel);
+            screenLabel = null; 
+        }
     }
 
     public void cycleScreens() {

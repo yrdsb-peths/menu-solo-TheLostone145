@@ -1,26 +1,32 @@
 
 public class Stack{
-    public class StackOfStrings{
+    public class StackOfStrings
+    {
         private Node first;
-        private class Node {		
+        private class Node 
+        {		
            private String item;
            private Node next;
         }
-        public boolean isEmpty() {
+        public boolean isEmpty() 
+        {
            return first == null;
         }
-        public void push(String item) {
+        public void push(String item) 
+        {
            Node second = first;
            first = new Node();
            first.item = item;
            first.next = second;
         }
-        public String pop() {
+        public String pop()
+         {
            String item = first.item;
            first = first.next;
            return item;
         }
-        public String peek() {		
+        public String peek() 
+        {		
            return first.item;
         }
      }

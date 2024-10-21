@@ -1,19 +1,23 @@
-public class Queue<T> {  
+public class Queue<T> 
+{  
     private Node first, last;
 
    
-    private class Node {
+    private class Node 
+    {
         T item;  
         Node next;
     }
 
     
-    public boolean isEmpty() { 
+    public boolean isEmpty() 
+    { 
         return (first == null); 
     }
 
     
-    public void enqueue(T item) {
+    public void enqueue(T item) 
+    {
         Node oldLast = last;
         last = new Node();
         last.item = item;  
@@ -25,7 +29,8 @@ public class Queue<T> {
     }
 
     
-    public T dequeue() {
+    public T dequeue() 
+    {
         T item = first.item;  
         first = first.next;
         if (isEmpty())  
@@ -33,7 +38,8 @@ public class Queue<T> {
         return item;
     }
 
-    public T peek() {
+    public T peek() 
+    {
         if (isEmpty()) return null; 
         return first.item;  
     }
