@@ -61,7 +61,7 @@ public class MenuScreen extends World {
         screenQueue.enqueue(firstScreen);
         currentScreen = screenQueue.peek();
     
-        if (screenLabel != null) {
+        if (screenLabel == null) {
             removeObject(screenLabel);
         }
     
