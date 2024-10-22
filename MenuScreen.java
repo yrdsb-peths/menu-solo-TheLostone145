@@ -20,13 +20,13 @@ public class MenuScreen extends World {
        
         avatarLabel = new Label(currentAvatar, 100, 100);
         avatarLabel.setImage(currentAvatar);
-        Label avatarCycleName= new Label("cycle Avatars", 50);
-        Label instructionName= new Label("Instructions", 50);
-        Label highScoreName= new Label("Highscore", 50);
+        Label avatarCycleName= new Label("cycle Avatars", 25);
+        Label instructionName= new Label("Instructions", 25);
+        Label highScoreName= new Label("Highscore", 25);
         addObject(avatarLabel, 300, 200);
         addObject(screenLabel, 300, 100);
         addObject(avatarCycleName, 150, 250);
-        addObject(InstructionName, 150, 300);
+        addObject(instructionName, 150, 300);
         addObject(highScoreName, 150, 350);
        
         addObject(new Button(this::cycleAvatar), 300, 250);
