@@ -3,11 +3,13 @@ import greenfoot.*;
 public class InstructionScreen extends World 
 {
     private MenuScreen menuScreen;  
-    private String[] instructions = {
-        "Welcome to the game!",
-        "Use arrow keys to move.",
-        "Collect coins to score points."
+    private String[] instructions = 
+    {
+        "Screen 1",
+        "Screen 2",
+        "Screen 3"
     };
+
     private int currentIndex = 0;
     private Label instructionLabel;
     public InstructionScreen(MenuScreen menuScreen) 
@@ -19,9 +21,11 @@ public class InstructionScreen extends World
         addObject(new Button(this::cycleInstruction), 300, 300);
         addObject(new Button(this::goBack), 300, 350);
     }
-    public void cycleInstruction() {
+    public void cycleInstruction() 
+    {
         currentIndex++;
-        if (currentIndex >= instructions.length) {
+        if (currentIndex >= instructions.length) 
+        {
             currentIndex = 0;
         }
         removeObject(instructionLabel);

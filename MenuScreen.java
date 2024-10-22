@@ -6,7 +6,8 @@ public class MenuScreen extends World {
     private Label avatarLabel;
     private Label screenLabel;
 
-    public MenuScreen() {
+    public MenuScreen() 
+    {
         super(600, 400, 1);
 
         addObject(new Button(this::goToHighScores), 300, 350);
@@ -28,13 +29,15 @@ public class MenuScreen extends World {
         addObject(new Button(this::goToInstructionScreen), 300, 300);
     }
 
-    private void loadAvatars() {
+    private void loadAvatars() 
+    {
         avatarQueue.enqueue(new GreenfootImage("images/face_a.png"));
         avatarQueue.enqueue(new GreenfootImage("images/face_b.png"));
         avatarQueue.enqueue(new GreenfootImage("images/face_c.png"));
     }
 
-    public void cycleAvatar() {
+    public void cycleAvatar() 
+    {
         GreenfootImage firstAvatar = avatarQueue.dequeue();
         avatarQueue.enqueue(firstAvatar);
         currentAvatar = avatarQueue.peek();
@@ -43,10 +46,12 @@ public class MenuScreen extends World {
     }
 
 
-    public void goToHighScores() {
+    public void goToHighScores() 
+    {
         Greenfoot.setWorld(new HighScoreScreen(this)); 
     }
-    public void goToInstructionScreen() {
+    public void goToInstructionScreen() 
+    {
         Greenfoot.setWorld(new InstructionScreen(this)); 
     }
     
