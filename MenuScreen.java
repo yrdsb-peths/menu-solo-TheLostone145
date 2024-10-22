@@ -40,10 +40,6 @@ public class MenuScreen extends World {
         currentAvatar = avatarQueue.peek();
         avatarLabel.setImage(currentAvatar);
     
-        if (screenLabel != null) {
-            removeObject(screenLabel);
-            screenLabel = null; 
-        }
     }
 
 
