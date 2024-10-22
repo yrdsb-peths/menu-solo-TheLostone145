@@ -17,7 +17,8 @@ public class MenuScreen extends World {
         currentAvatar = avatarQueue.peek();
         screenLabel = new Label("Menu", 75);
        
-        avatarLabel = new Label(currentAvatar, null, 100);
+        avatarLabel = new Label(currentAvatar, 100, 100);
+        avatarLabel.setImage(currentAvatar);
        
         addObject(avatarLabel, 300, 200);
         addObject(screenLabel, 300, 100);

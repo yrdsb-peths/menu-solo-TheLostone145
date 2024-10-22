@@ -34,6 +34,7 @@ public class Label extends Actor
     {
         this(value, fontSize);
     }
+    
 
     public Label(Label currentScreen, int value, int fontSize)
     {
