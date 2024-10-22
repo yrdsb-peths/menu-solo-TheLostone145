@@ -20,7 +20,11 @@ public class InstructionScreen extends World
     }
     public void cycleInstruction(){
         int indexNum=currentIndex;
+        if(indexNum>1){
         indexNum++;
+        }else{
+            indexNum=0;
+        }
         removeObject(instructionLabel);
         instructionLabel=new Label(instructions[indexNum], 24);
         addObject(instructionLabel, 300, 200);
