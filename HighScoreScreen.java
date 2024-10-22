@@ -16,6 +16,8 @@ public class HighScoreScreen extends World {
         displayScores();
         
         addObject(new Button(this::goBack), 300, 350);
+        Label backButton= new Label ("Go Back", 50);
+        addObject(backButton, 150, 350);
     }
 
     private void loadScores() 

@@ -20,6 +20,10 @@ public class InstructionScreen extends World
         addObject(instructionLabel, 300, 200); 
         addObject(new Button(this::cycleInstruction), 300, 300);
         addObject(new Button(this::goBack), 300, 350);
+        Label backButton= new Label ("Go Back", 50);
+        Label cycleButton= new Label ("Cycle Instructions", 50);
+        addObject(backButton, 150, 350);
+        addObject(cycleButton, 150, 300);
     }
     public void cycleInstruction() 
     {
