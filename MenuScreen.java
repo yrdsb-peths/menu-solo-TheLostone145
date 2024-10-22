@@ -9,7 +9,7 @@ public class MenuScreen extends World {
     public MenuScreen() {
         super(600, 400, 1);
 
-        addObject(new Button(this::goToHighScores), 300, 400);
+        addObject(new Button(this::goToHighScores), 300, 350);
         avatarQueue = new Queue<>();
         
 
@@ -18,13 +18,13 @@ public class MenuScreen extends World {
        
         currentAvatar = avatarQueue.peek();
        
-        avatarLabel = new Label(currentAvatar, 100, 100);
+        avatarLabel = new Label(currentAvatar, "Welcome to the game", 100);
        
         addObject(avatarLabel, 300, 200);
        
-        addObject(new Button(this::cycleAvatar), 300, 300);
+        addObject(new Button(this::cycleAvatar), 300, 250);
 
-        addObject(new Button(this::goToInstructionScreen), 300, 350);
+        addObject(new Button(this::goToInstructionScreen), 300, 300);
     }
 
     private void loadAvatars() {
