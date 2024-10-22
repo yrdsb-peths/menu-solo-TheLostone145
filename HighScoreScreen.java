@@ -23,8 +23,8 @@ public class HighScoreScreen extends World {
         displayInstruction();
         
         addObject(new Button(this::goBack), 300, 350);
-        addObject(new Button(this::previousInstruction), 150, 300);
-        addObject(new Button(this::nextInstruction), 450, 300);
+        addObject(new Button(this::previousInstruction), 150, 350);
+        addObject(new Button(this::nextInstruction), 450, 350);
     }
 
     private void loadScores() {
