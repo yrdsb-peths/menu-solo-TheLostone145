@@ -47,10 +47,10 @@ public class MenuScreen extends World {
 
 
     public void goToHighScores() {
-        Greenfoot.setWorld(new HighScoreScreen()); 
+        Greenfoot.setWorld(new HighScoreScreen(this)); 
     }
     public void goToInstructionScreen() {
-        Greenfoot.setWorld(new InstructionScreen()); 
+        Greenfoot.setWorld(new InstructionScreen(this)); 
     }
     
 }

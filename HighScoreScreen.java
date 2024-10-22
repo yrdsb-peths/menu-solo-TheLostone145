@@ -5,7 +5,7 @@ import greenfoot.*;
 public class HighScoreScreen extends World {
     private Map<String, Integer> highScores;
     private MenuScreen menuScreen;
-    public HighScoreScreen() {
+    public HighScoreScreen(MenuScreen menuScreen) {
         super(600, 400, 1);
         highScores = new HashMap<>();
         loadScores();
