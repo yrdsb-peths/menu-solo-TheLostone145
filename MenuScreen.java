@@ -11,16 +11,16 @@ public class MenuScreen extends World {
 
         addObject(new Button(this::goToHighScores), 300, 350);
         avatarQueue = new Queue<>();
-        
-
        
         loadAvatars();
        
         currentAvatar = avatarQueue.peek();
+        screenLabel = new Label("Menu", 75);
        
-        avatarLabel = new Label(currentAvatar, "Welcome to the game", 100);
+        avatarLabel = new Label(currentAvatar, null, 100);
        
         addObject(avatarLabel, 300, 200);
+        addObject(screenLabel, 300, 100);
        
         addObject(new Button(this::cycleAvatar), 300, 250);
 
