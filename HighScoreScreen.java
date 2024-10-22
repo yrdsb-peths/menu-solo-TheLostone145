@@ -7,6 +7,7 @@ public class HighScoreScreen extends World {
     private MenuScreen menuScreen;
     public HighScoreScreen(MenuScreen menuScreen) {
         super(600, 400, 1);
+        this.menuScreen = menuScreen;
         highScores = new HashMap<>();
         loadScores();
         displayScores();

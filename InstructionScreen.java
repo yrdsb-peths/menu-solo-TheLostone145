@@ -13,6 +13,7 @@ public class InstructionScreen extends World
     public InstructionScreen(MenuScreen menuScreen) 
     {
         super(600, 400, 1);
+        this.menuScreen = menuScreen;
         instructionLabel = new Label(instructions[currentIndex], 24);
         addObject(instructionLabel, 300, 200); 
         addObject(new Button(this::cycleInstruction), 300, 300);
